@@ -1,0 +1,79 @@
+body {
+  margin: 0;
+  margin-left: 5px;
+  font-family: 'VT323';font-size: 22px;
+  background: linear-gradient(to right, #2980b9, #6dd5fa);
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+a:hover {
+  color: rgb(255, 255, 255);
+}
+
+a {
+  margin-left: 5px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.content {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.project-list {
+  list-style: none;
+  padding: 0;
+}
+
+.project-list li {
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+  transition: background-color 0.3s ease;
+}
+
+.project-list li:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fade-in 1s ease-in-out;
+}
+
+.watermark {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  font-size: 18px;
+  color: black;
+  background-color: white;
+  padding: 5px 10px;
+  border: 1px solid black;
+}

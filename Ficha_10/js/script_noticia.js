@@ -1,0 +1,7 @@
+const tituloNoticia = "Henry Kissinger morre aos 100 anos";
+const leadNoticia = "Henry Kissinger, figura incontornável da diplomacia mundial, cujos papéis como conselheiro de Segurança Nacional e secretário de Estado sob dois presidentes deixaram uma marca indelével na política externa dos EUA e lhe valeram um controverso Prémio Nobel da Paz, morreu na quarta-feira aos 100 anos.";
+const corpoNoticia = "Kissinger morreu na sua casa no Connecticut, de acordo com um comunicado da sua empresa de consultoria geopolítica, Kissinger Associates Inc. Não foram, para já, mencionadas as circunstâncias da morte.<br><br>O comunicado refere que Kissinger será sepultado numa cerimónia privada da família, a que se seguirá posteriormente uma cerimónia pública em Nova Iorque.<br><br><b>Kissinger esteve ativo no final da vida, participando em reuniões na Casa Branca, publicando um livro sobre estilos de liderança e testemunhando perante uma comissão do Senado sobre a ameaça nuclear da Coreia do Norte.</b> Em julho de 2023, fez uma visita surpresa a Pequim para se encontrar com o presidente chinês Xi Jinping.<br><br>Durante a década de 1970, em plena Guerra Fria, participou em muitos dos acontecimentos globais que mudaram a época da década, enquanto era conselheiro de segurança nacional e secretário de Estado do presidente republicano Richard Nixon.";
+
+document.getElementById('titulo').textContent = tituloNoticia;
+document.getElementById('lead').textContent = leadNoticia;
+document.getElementById('corpo').innerHTML = corpoNoticia;

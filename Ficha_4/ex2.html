@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Marcelo Dias">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testes de Regex :D</title>
+</head>
+
+<body>
+    <form id="regexForm">
+        <div>
+            <label for="apenasTexto">Só texto:</label>
+            <input type="text" id="apenasTexto" placeholder="Só Texto" pattern="[a-zA-Z]+" title="Só letras do alfabeto são permitidas.">
+        </div>
+
+        <div>
+            <label for="apenasNumeros">Só números:</label>
+            <input type="text" id="apenasNumeros" placeholder="Só números" pattern="[0-9]+" title="Só números são permitidos.">
+        </div>
+
+        <div>
+            <label for="apenasMinúsculas">Só 'a' a 'z':</label>
+            <input type="text" id="apenasMinúsculas" placeholder="Só Minúsculas" pattern="[a-z]+" title="Só letras minúsculas são permitidas.">
+        </div>
+
+        <div>
+            <label for="ipv">IPV:</label>
+            <input type="text" id="ipv" placeholder="Só ipv" pattern="[ipv]+" title="Só as letras i, p e v são permitidas.">
+        </div>
+
+        <div>
+            <label for="naoIpv">!IPV:</label>
+            <input type="text" id="naoIpv" placeholder="Não ipv" pattern="[^ipv]+" title="Não são permitidas as letras i, p ou v.">
+        </div>
+
+        <div>
+            <label for="quinzeCaracteres">Sempre 15 caracteres:</label>
+            <input type="text" id="quinzeCaracteres" placeholder="15 caracteres Maiúsculos" pattern="[A-Z]{15}" title="Deve conter 15 letras maiúsculas.">
+        </div>
+
+        <div>
+            <label for="numeroTelemovel">Contacto telemóvel:</label>
+            <input type="text" id="numeroTelemovel" placeholder="Telemóvel" pattern="9[1236]-\d{3}-\d{3}|\d{3} \d{3} \d{3}" title="Formato válido: xxx-xxx-xxx ou xxx xxx xxx, onde o primeiro dígito é 9 e o segundo dígito é 1, 2, 3 ou 6.">
+        </div>
+
+        <button type="submit">Enviar</button>
+        <button type="reset">Limpar</button>
+    </form>
+</body>
+
+</html>

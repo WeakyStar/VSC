@@ -1,0 +1,27 @@
+#noticia {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  #titulo {
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  #lead {
+    color: #666;
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+  
+  #corpo {
+    color: #444;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
