@@ -8,40 +8,38 @@
 
 .googly .div {
   background-color: #ffffff;
-  width: 920.89px;
-  height: 518px;
+  width: 1920px;
+  height: 1080px;
   position: relative;
 }
 
 .googly .img {
   position: absolute;
-  width: 567px;
-  height: 119px;
-  top: 45px;
-  left: 177px;
+  width: 100px;
+  height: 100px;
   object-fit: cover;
 }
 
 .googly .group {
   position: absolute;
-  width: 529px;
-  height: 132px;
-  top: 243px;
-  left: 196px;
+  width: 1102px;
+  height: 275px;
+  top: 506px;
+  left: 409px;
 }
 
 .googly .group-2 {
   position: absolute;
-  width: 53px;
-  height: 104px;
+  width: 108px;
+  height: 217px;
   top: 0;
-  left: 478px;
+  left: 996px;
 }
 
 .googly .rectangle {
   position: absolute;
-  width: 51px;
-  height: 61px;
+  width: 106px;
+  height: 126px;
   top: 0;
   left: 0;
   background-color: #ff0000;
@@ -49,93 +47,93 @@
 
 .googly .text-wrapper {
   position: absolute;
-  height: 28px;
-  top: 76px;
-  left: 5px;
+  height: 58px;
+  top: 159px;
+  left: 9px;
   font-family: "VT323", Helvetica;
   font-weight: 400;
   color: #000000;
-  font-size: 25.5px;
+  font-size: 53.1px;
   text-align: center;
   letter-spacing: 0;
-  line-height: 27.8px;
+  line-height: 58px;
   white-space: nowrap;
 }
 
 .googly .group-3 {
   position: absolute;
-  width: 145px;
-  height: 104px;
+  width: 300px;
+  height: 217px;
   top: 0;
-  left: 200px;
+  left: 416px;
 }
 
 .googly .rectangle-2 {
-  left: 47px;
+  left: 97px;
   position: absolute;
-  width: 51px;
-  height: 61px;
+  width: 106px;
+  height: 126px;
   top: 0;
   object-fit: cover;
 }
 
 .googly .text-wrapper-2 {
   position: absolute;
-  height: 28px;
-  top: 76px;
+  height: 58px;
+  top: 159px;
   left: 0;
   font-family: "VT323", Helvetica;
   font-weight: 400;
   color: #000000;
-  font-size: 25.5px;
+  font-size: 53.1px;
   text-align: center;
   letter-spacing: 0;
-  line-height: 27.8px;
+  line-height: 58px;
   white-space: nowrap;
 }
 
 .googly .group-4 {
   position: absolute;
-  width: 84px;
-  height: 119px;
-  top: 14px;
+  width: 173px;
+  height: 247px;
+  top: 28px;
   left: 0;
 }
 
 .googly .rectangle-3 {
-  left: 16px;
+  left: 33px;
   position: absolute;
-  width: 51px;
-  height: 61px;
+  width: 106px;
+  height: 126px;
   top: 0;
   object-fit: cover;
 }
 
 .googly .tipos-de-pl-stico {
   position: absolute;
-  height: 56px;
-  top: 63px;
+  height: 116px;
+  top: 131px;
   left: 0;
   font-family: "VT323", Helvetica;
   font-weight: 400;
   color: #000000;
-  font-size: 25.5px;
+  font-size: 53.1px;
   text-align: center;
   letter-spacing: 0;
-  line-height: 27.8px;
+  line-height: 58px;
 }
 
 .googly .text-wrapper-3 {
   position: absolute;
-  height: 28px;
-  top: 190px;
-  left: 248px;
+  height: 58px;
+  top: 396px;
+  left: 517px;
   font-family: "Kyiv*Type Serif-Regular2", Helvetica;
   font-weight: 400;
   color: #000000;
-  font-size: 25.5px;
+  font-size: 53.1px;
   text-align: center;
   letter-spacing: 0;
-  line-height: 27.8px;
+  line-height: 58px;
   white-space: nowrap;
 }
