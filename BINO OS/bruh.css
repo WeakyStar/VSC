@@ -44,6 +44,26 @@ body {
     display: none;
 }
 
+
+
+
+
+#teste {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99999999;
+    pointer-events: none;
+    height: 100%;
+}
+#teste > div {
+    pointer-events: all;
+}
+#teste > div {
+    display: none;
+}
+
 #start-menu {
     bottom: 3.75rem;
     position: absolute;
@@ -267,14 +287,15 @@ a.desktop-item {
     height: 21rem;
 }
 .window.ie {
-    width: 70%;
-    min-width: 60%;
+    justify-content: center;
+    width: 62%;
+    min-width: 50%;
     left: 10%;
     margin-top: 0;
     position: absolute;
     top: 5rem;
-    height: 27rem;
-    min-height: 20rem;
+    height: 33rem;
+    min-height: 30rem;
 }
 
 
@@ -664,6 +685,7 @@ textarea:focus {
     margin-top: 2px;
 }
 
+#teste-input-max:checked ~ #teste .ie,
 #windows-ie-input-max:checked ~ #all-windows .ie,
 #windows-notepad-input-max:checked ~ #all-windows .notepad,
 #windows-trash-input-max:checked ~ #all-windows .trash,
@@ -678,6 +700,8 @@ textarea:focus {
     top: 0;
     z-index: 9999999;
 }
+
+#teste-input:checked ~ #teste .ie,
 #windows-ie-input:checked ~ #all-windows .ie,
 #windows-notepad-input:checked ~ #all-windows .notepad,
 #windows-trash-input:checked ~ #all-windows .trash,
@@ -687,6 +711,8 @@ textarea:focus {
 #windows-help-input:checked ~ #all-windows .help {
     display: block;
 }
+
+#teste-input:checked ~ #start-bar .teste-tab,
 #windows-ie-input:checked ~ #start-bar .ie-tab,
 #windows-notepad-input:checked ~ #start-bar .notepad-tab,
 #windows-trash-input:checked ~ #start-bar .trash-tab,
@@ -696,6 +722,8 @@ textarea:focus {
 #windows-help-input:checked ~ #start-bar .help-tab {
     display: flex;
 }
+
+#teste-input-min:checked ~ #teste .ie,
 #windows-ie-input-min:checked ~ #all-windows .ie,
 #windows-notepad-input-min:checked ~ #all-windows .notepad,
 #windows-trash-input-min:checked ~ #all-windows .trash,
@@ -705,6 +733,8 @@ textarea:focus {
 #windows-help-input-min:checked ~ #all-windows .help {
     display: none;
 }
+
+#teste-input:checked ~ #start-bar .ie-tab,
 #windows-ie-input:checked ~ #start-bar .ie-tab,
 #windows-notepad-input:checked ~ #start-bar .notepad-tab,
 #windows-trash-input:checked ~ #start-bar .trash-tab,
@@ -714,6 +744,9 @@ textarea:focus {
 #windows-help-input:checked ~ #start-bar .help-tab { /*sombra da window*/
     box-shadow: -2px -2px #818181, -2px 0 #818181, 0 -2px #818181, -4px -4px black, -4px 0 black, 0 -4px black, 2px 2px #e0dede, 0 2px #e0dede, 2px 0 #e0dede,  2px -2px #818181, -2px 2px #e0dede, -4px 2px black, -4px 4px white, 4px 4px white, 4px 0 white, 0 4px white, 2px -4px black, 4px -4px white;
 }
+
+
+#teste-input-min:checked ~ #start-bar .ie-tab,
 #windows-ie-input-min:checked ~ #start-bar .ie-tab,
 #windows-notepad-input-min:checked ~ #start-bar .notepad-tab,
 #windows-trash-input-min:checked ~ #start-bar .trash-tab,
@@ -723,6 +756,9 @@ textarea:focus {
 #windows-help-input-min:checked ~ #start-bar .help-tab { /*sombra da window*/
     box-shadow: -2px -2px #e0dede, -2px 0 #e0dede, 0 -2px #e0dede, -4px -4px white, -4px 0 white, 0 -4px white, 2px 2px #818181, 0 2px #818181, 2px 0 #818181,  2px -2px #e0dede, -2px 2px #818181, -4px 2px white, -4px 4px black, 4px 4px black, 4px 0 black, 0 4px black, 2px -4px white, 4px -4px black;
 }
+
+
+#teste-input-on-top:checked ~ #teste .ie,
 #windows-ie-input-on-top:checked ~ #all-windows .ie,
 #windows-notepad-input-on-top:checked ~ #all-windows .notepad,
 #windows-trash-input-on-top:checked ~ #all-windows .trash,
