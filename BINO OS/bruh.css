@@ -1,11 +1,12 @@
 body {
-    background-image: url(img/bino\ drip\ wide.png);
+    background-image: url(img/wallpaper\ bino.png);
 
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    background-position: center;
 
-
+    
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
@@ -145,15 +146,15 @@ body {
 }
 #time-options {
     box-shadow: 0 2px white, 0 -2px #7d7d7d, -2px -2px #7d7d7d, 2px 2px white, -2px 2px #7d7d7d, 2px -2px white;
-    width: 5rem;
+    width: 3.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-#time-options:after {
+/*#time-options:after {
     content: '04:20 AM';
-}
+}*/
 #start-button:active {    
     box-shadow: -2px -2px #818181, -2px 0 #818181, 0 -2px #818181, -4px -4px black, -4px 0 black, 0 -4px black, 2px 2px #e0dede, 0 2px #e0dede, 2px 0 #e0dede,  2px -2px #818181, -2px 2px #e0dede, -4px 2px black, -4px 4px white, 4px 4px white, 4px 0 white, 0 4px white, 2px -4px black, 4px -4px white;
 }
@@ -580,9 +581,9 @@ iframe {
 #update-input:checked ~ #start-bar #start-menu .update {
     display: none;
 }
-#update-input:checked ~ #start-bar #time-options:after {
+/*#update-input:checked ~ #start-bar #time-options:after {
     content: '4:20 PM'
-}
+}*/
 #update-input:checked ~ #background {
     background-color: black;
     background-repeat: no-repeat;
