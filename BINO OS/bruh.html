@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="style.css" />
     <style type="text/css"> 
     * {
-		cursor: url(img/image.cur), auto !important;
+		cursor: url(img/cursor.cur), auto !important;
 		image-rendering: auto;
 		image-rendering: crisp-edges;
 		image-rendering: pixelated;
@@ -27,6 +27,9 @@
         <!-- Login and Shutdown -->
         <input type="checkbox" id="login-screen-input" name="login-screen-input" />
         <input type="checkbox" id="shutdown-screen-input" name="shutdown-screen-input" />
+
+       
+
         <input type="checkbox" name="start-button-input" id="start-button-input" />
         <input type="radio" name="update-input" id="update-input" />
         <div id="background"></div>
@@ -103,6 +106,9 @@
                         alt="" /> </div>
                 <div class="text">teste_</div>
             </label>
+
+
+
             <label for="windows-notepad-input" class="desktop-item">
                 <div class="icon"><img
                         src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAUVBMVEUAAACGhoYAgID4+Phm//+ZzMyZ///AwMAAAADM///x8fHM7P/q6upmzMymyvDM/8zd3d2Z/8zj4+MzmZnMzMxmzP9m/8wzzMwzzP/X19f///8yWdUJAAAAAXRSTlMAQObYZgAAAAFiS0dEGnVn5DIAAAAHdElNRQfiBhoALTAhTzgxAAABUklEQVQ4y5WT27aCMAxEJZByqYkFqR7//0fPpKUW0BeH4svsziQuvVx+UNOcz1HU0ukcEerYuf2hnobhEJA1TuPkPc5Vhr6pBLlst5MRo/de6RMwG5evsG8jAnZA9s22yze8jICwB8ZpKEL8rBawvAFyk7fZsmbdAvaArwHqsaUM97tIAVBQbjtdHApshb5dKpAGm+Hgg9WxTRDeAPybpma7i69RHaUGqYAf0axshzkHrG1JICtNT0ai2gpoqIBXh2iGLSodP2wFa8gVhKVSgOPIHYgYLaBvSwK5tJcKdyAk4qL5oQA2AaslR4ZpPpUG2QCNjzibm/yYAqwhJWCCjlmzkxih0rABSH5s2SLP+Ewr5AarIOYt2N4/eVrAmhu2Ic9KE4QKXIaT7rVBmv3PulnCC1rXF552l7ADlhDCy7D2GwDirP4I4N941tH/nPfsf9M/lngcOlIX3Z0AAAAldEVYdGRhdGU6Y3JlYXRlADIwMTgtMDYtMjZUMDA6NDU6NDgtMDQ6MDBhJQfuAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE4LTA2LTI2VDAwOjQ1OjQ4LTA0OjAwEHi/UgAAAABJRU5ErkJggg=="
@@ -133,17 +139,52 @@
                         alt="" /></span><span class="text">Read Article</span></a>
 
 
+                        <input type="checkbox" id="bino-os-gif">
+                        <div id="gif" class="mostrar">
 
+                            <label for="bino-os-gif" class="desktop-item">
+                                <div class="icon" onclick="toggleGif()">
+                                    <img src="img/folder1.png" alt="" />
+                                </div>
+                                <div class="text">binos os gif</div>
+                            </label> 
 
+                        </div>
 
+                        <div id="gif-container" style="display: none;">
+                            <img id="random-gif" src="" alt="">
+                        </div>
 
+                        <script>
+                        var gifArray = [
+                            'img/gif_bino.gif',
+                            'img/gif_bino_2.gif',
+                            'img/gif_bino_3.gif',
+                            'img/gif_bino_4.gif',
+                            'img/gif_bino_5.gif',
+                            'img/gif_bino_6.gif',
+                            'img/gif_bino_7.gif',
+                            'img/gif_bino_8.gif',
+                            'img/gif_bino_9.gif',
+                            'img/gif_bino_10.gif',
+                            'img/gif_bino_11.gif',
+                            'img/gif_bino_12.gif',
 
+                            
+                        ];
 
+                        function toggleGif() {
+                            var gifContainer = document.getElementById("gif-container");
+                            var randomGif = document.getElementById("random-gif");
+                            if (gifContainer.style.display === "none") {
+                                gifContainer.style.display = "block";
+                                randomGif.src = gifArray[Math.floor(Math.random() * gifArray.length)];
+                            } else {
+                                gifContainer.style.display = "none";
+                            }
+                        }
+                        </script>
 
-
-
-
-                        
         </div>
 
         <div id="teste">
