@@ -138,52 +138,65 @@
                         src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgBAMAAACBVGfHAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAHlBMVEUAAACAgID//7QAAADAwMD///8AgIAAAIAAgAAAAP+MXRRYAAAAAXRSTlMAQObYZgAAAAFiS0dEBfhv6ccAAAAHdElNRQfiBhoANyCM1dKOAAAAkUlEQVQoz2NgYBCEAQYoEFKCAEUDdAFhdAFHAzSBEGE0gVCoErBAWpKSorGxMVwgzT0jCUg5wwTU3Do62lAEIirTmpEFUl0yy8qMkAVcJdJmIgukhUh0TkcWSJzZkY4ioDYzo7wcxZaZM6YVIwsolVcWG6EIKBmD+MgCEIBTYCYETBpoFYQERFzgACJgjAQYGADW/1JJ50I4UgAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAxOC0wNi0yNlQwMDo1NTozMi0wNDowMA4ejnkAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMTgtMDYtMjZUMDA6NTU6MzItMDQ6MDB/QzbFAAAAAElFTkSuQmCC"
                         alt="" /></span><span class="text">Read Article</span></a>
 
-
-                        <input type="checkbox" id="bino-os-gif">
-                        <div id="gif" class="mostrar">
-
-                            <label for="bino-os-gif" class="desktop-item">
-                                <div class="icon" onclick="toggleGif()">
-                                    <img src="img/folder1.png" alt="" />
-                                </div>
-                                <div class="text">binos os gif</div>
-                            </label> 
-
-                        </div>
-
-                        <div id="gif-container" style="display: none;">
-                            <img id="random-gif" src="" alt="">
-                        </div>
-
-                        <script>
+                    <!--aqui-->
+                    <input type="checkbox" id="bino-os-gif">
+                    <div id="gif" class="mostrar">
+                    
+                        <label for="bino-os-gif" class="desktop-item">
+                            <div class="icon" onclick="toggleGif()">
+                                <img src="img/gif/gif_bino.gif" alt="" />
+                            </div>
+                            <div class="text">GIF</div>
+                        </label> 
+                    
+                    </div>
+                    
+                    <div id="gif-container" style="display: none;">
+                        <img id="random-gif" src="" alt="">
+                    </div>
+                    
+                    <script>
                         var gifArray = [
-                            'img/gif_bino.gif',
-                            'img/gif_bino_2.gif',
-                            'img/gif_bino_3.gif',
-                            'img/gif_bino_4.gif',
-                            'img/gif_bino_5.gif',
-                            'img/gif_bino_6.gif',
-                            'img/gif_bino_7.gif',
-                            'img/gif_bino_8.gif',
-                            'img/gif_bino_9.gif',
-                            'img/gif_bino_10.gif',
-                            'img/gif_bino_11.gif',
-                            'img/gif_bino_12.gif',
-
-                            
+                            'img/gif/gif_bino.gif',
+                            'img/gif/gif_bino_2.gif',
+                            'img/gif/gif_bino_3.gif',
+                            'img/gif/gif_bino_4.gif',
+                            'img/gif/gif_bino_5.gif',
+                            'img/gif/gif_bino_6.gif',
+                            'img/gif/gif_bino_7.gif',
+                            'img/gif/gif_bino_8.gif',
+                            'img/gif/gif_bino_9.gif',
+                            'img/gif/gif_bino_10.gif',
+                            'img/gif/gif_bino_11.gif',
+                            'img/gif/gif_bino_12.gif', 
                         ];
-
+                        
                         function toggleGif() {
-                            var gifContainer = document.getElementById("gif-container");
-                            var randomGif = document.getElementById("random-gif");
-                            if (gifContainer.style.display === "none") {
-                                gifContainer.style.display = "block";
-                                randomGif.src = gifArray[Math.floor(Math.random() * gifArray.length)];
-                            } else {
-                                gifContainer.style.display = "none";
+                                var gifContainer = document.getElementById("gif-container");
+                                var randomGif = document.getElementById("random-gif");
+                                var gifTabText = document.querySelector(".gif-tab-text");
+                                
+
+                                if (gifContainer.style.display === "none" || getComputedStyle(gifContainer).display === "none") {
+                                    gifContainer.style.display = "block";
+                                    randomGif.src = gifArray[Math.floor(Math.random() * gifArray.length)];
+
+                                    gifTabText.style.display = "flex";
+                                    
+
+                                } else {
+                                    gifContainer.style.display = "none";
+
+                                    gifTabText.style.display = "none";
+
+                                }
                             }
-                        }
-                        </script>
+                        
+                    </script>
+                        
+                    
+
+                  
 
         </div>
 
@@ -414,7 +427,7 @@
 
             
             <div class="window documents windows-box-shadow">
-                <div class="header"><label for="windows-documents-input-on-top">teste</label>
+                <div class="header"><label for="windows-documents-input-on-top">teste_</label>
                     <div class="header-buttons">
                         <label for="windows-documents-input-min" class="minimize windows-box-shadow"></label>
                         <label for="windows-documents-input-max" class="maximize windows-box-shadow"></label>
@@ -640,6 +653,7 @@
             <div id="start-button-items">
                 <label id="start-button" class="windows-box-shadow" for="start-button-input"></label>
                 <div id="items">
+                    <!--aqui-->
                     <label for="windows-input-min" class="ie-tab tab windows-box-shadow"><span><img
                                 src="img/bino www.png"
                                 alt="" /></span><span>Bino Explorer</span></label>
@@ -648,7 +662,9 @@
                                     src="img/folder1.png"
                                     alt="" /></span><span>teste</span></label>
 
-
+                                    <label for="bino-os-gif" class="gif-tab-text tab windows-box-shadow"><span><img
+                                        src="img/bino drip wide.png"
+                                        alt="" /></span><span>GIF</span></label>
 
                     <label for="windows-help-input-min" class="help-tab tab windows-box-shadow"><span><img
                                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgBAMAAACBVGfHAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAGFBMVEUAAACAAIAAAACAgICAgAD//wDAwMD///9lJw0+AAAAAXRSTlMAQObYZgAAAAFiS0dEBxZhiOsAAAAHdElNRQfiBhgXChR06RP7AAAAvUlEQVQoz3XRUQ6DIAyAYeYNKOwd8QTLEn1eMg+wxF7AB7zBvP7aUlBM5hufP5QEY/58N7iAs7ENHrYVZ20jHDQiwUk4mPF1CAV3RKwNB7i88UMAGnj6LRDKCE9GAKGOmOWMIZQ70JqmwBg08Ljw1CGFcknPaxgJIMoOXlPA8GSRkXZMKRpILHM+Ia1gYPtKIyeknrZsu0oOGLJoYKybsmhgul5Fg0M0qLKXoEoNihyByto8Jsk5ELm+dqfBDwcgN9nfkQsOAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE4LTA2LTI0VDIzOjEwOjIwLTA0OjAw2N+qCAAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxOC0wNi0yNFQyMzoxMDoyMC0wNDowMKmCErQAAAAASUVORK5CYII="

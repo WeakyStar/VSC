@@ -64,6 +64,7 @@ body {
 }
 
 #gif-container img {
+    margin-left: 35px;
     margin-top: -150px; 
     height: 1000px;
 }
@@ -743,6 +744,7 @@ textarea:focus {
     display: block;
 }
 
+
 #teste-input:checked ~ #start-bar .teste-tab,
 #windows-ie-input:checked ~ #start-bar .ie-tab,
 #windows-notepad-input:checked ~ #start-bar .notepad-tab,
@@ -764,6 +766,7 @@ textarea:focus {
 #windows-help-input-min:checked ~ #all-windows .help {
     display: none;
 }
+
 
 #teste-input:checked ~ #start-bar .ie-tab,
 #windows-ie-input:checked ~ #start-bar .ie-tab,
@@ -787,6 +790,20 @@ textarea:focus {
 #windows-help-input-min:checked ~ #start-bar .help-tab { /*sombra da window*/
     box-shadow: -2px -2px #e0dede, -2px 0 #e0dede, 0 -2px #e0dede, -4px -4px white, -4px 0 white, 0 -4px white, 2px 2px #818181, 0 2px #818181, 2px 0 #818181,  2px -2px #e0dede, -2px 2px #818181, -4px 2px white, -4px 4px black, 4px 4px black, 4px 0 black, 0 4px black, 2px -4px white, 4px -4px black;
 }
+
+
+.gif-tab-text {
+    
+    display: flex;
+    box-shadow: -2px -2px #818181, -2px 0 #818181, 0 -2px #818181, -4px -4px black, -4px 0 black, 0 -4px black, 2px 2px #e0dede, 0 2px #e0dede, 2px 0 #e0dede,  2px -2px #818181, -2px 2px #e0dede, -4px 2px black, -4px 4px white, 4px 4px white, 4px 0 white, 0 4px white, 2px -4px black, 4px -4px white;
+    
+}
+
+.gif-tab-text {
+    display: none;
+}
+
+
 
 
 #teste-input-on-top:checked ~ #teste .ie,
