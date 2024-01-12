@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BINO OS</title>
     <link rel="icon" href="img/mini bino.ico" type="image/x-icon">
-    <link rel="stylesheet" href="bruh.css">
-    <link rel="stylesheet" href="globals.css" />
-    <link rel="stylesheet" href="styleguide.css" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="googly-globals.css" />
+    <link rel="stylesheet" href="googly-styleguide.css" />
+    <link rel="stylesheet" href="googly-style.css" />
     <style type="text/css"> 
     * {
 		cursor: url(img/cursor.cur), auto !important;
@@ -113,7 +113,7 @@
                 <div class="icon"><img
                         src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAUVBMVEUAAACGhoYAgID4+Phm//+ZzMyZ///AwMAAAADM///x8fHM7P/q6upmzMymyvDM/8zd3d2Z/8zj4+MzmZnMzMxmzP9m/8wzzMwzzP/X19f///8yWdUJAAAAAXRSTlMAQObYZgAAAAFiS0dEGnVn5DIAAAAHdElNRQfiBhoALTAhTzgxAAABUklEQVQ4y5WT27aCMAxEJZByqYkFqR7//0fPpKUW0BeH4svsziQuvVx+UNOcz1HU0ukcEerYuf2hnobhEJA1TuPkPc5Vhr6pBLlst5MRo/de6RMwG5evsG8jAnZA9s22yze8jICwB8ZpKEL8rBawvAFyk7fZsmbdAvaArwHqsaUM97tIAVBQbjtdHApshb5dKpAGm+Hgg9WxTRDeAPybpma7i69RHaUGqYAf0axshzkHrG1JICtNT0ai2gpoqIBXh2iGLSodP2wFa8gVhKVSgOPIHYgYLaBvSwK5tJcKdyAk4qL5oQA2AaslR4ZpPpUG2QCNjzibm/yYAqwhJWCCjlmzkxih0rABSH5s2SLP+Ewr5AarIOYt2N4/eVrAmhu2Ic9KE4QKXIaT7rVBmv3PulnCC1rXF552l7ADlhDCy7D2GwDirP4I4N941tH/nPfsf9M/lngcOlIX3Z0AAAAldEVYdGRhdGU6Y3JlYXRlADIwMTgtMDYtMjZUMDA6NDU6NDgtMDQ6MDBhJQfuAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE4LTA2LTI2VDAwOjQ1OjQ4LTA0OjAwEHi/UgAAAABJRU5ErkJggg=="
                         alt="" /> </div>
-                <div class="text">Bloco de Notas</div>
+                <div class="text">bino.txt</div>
             </label>
             <label for="windows-minesweeper-input" class="desktop-item">
                 <div class="icon"><img
@@ -138,13 +138,13 @@
                         src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgBAMAAACBVGfHAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAHlBMVEUAAACAgID//7QAAADAwMD///8AgIAAAIAAgAAAAP+MXRRYAAAAAXRSTlMAQObYZgAAAAFiS0dEBfhv6ccAAAAHdElNRQfiBhoANyCM1dKOAAAAkUlEQVQoz2NgYBCEAQYoEFKCAEUDdAFhdAFHAzSBEGE0gVCoErBAWpKSorGxMVwgzT0jCUg5wwTU3Do62lAEIirTmpEFUl0yy8qMkAVcJdJmIgukhUh0TkcWSJzZkY4ioDYzo7wcxZaZM6YVIwsolVcWG6EIKBmD+MgCEIBTYCYETBpoFYQERFzgACJgjAQYGADW/1JJ50I4UgAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAxOC0wNi0yNlQwMDo1NTozMi0wNDowMA4ejnkAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMTgtMDYtMjZUMDA6NTU6MzItMDQ6MDB/QzbFAAAAAElFTkSuQmCC"
                         alt="" /></span><span class="text">Read Article</span></a>
 
-                    <!--aqui-->
+                    
                     <input type="checkbox" id="bino-os-gif">
                     <div id="gif" class="mostrar">
                     
                         <label for="bino-os-gif" class="desktop-item">
                             <div class="icon" onclick="toggleGif()">
-                                <img src="img/gif/gif_bino.gif" alt="" />
+                                <img src="img/giF/ICON_3.png" alt="" />
                             </div>
                             <div class="text">GIF</div>
                         </label> 
@@ -231,6 +231,83 @@
             </div>
         </div>
 
+<!--aqui-->
+
+        <div id="lixo">
+            <div class="window ie windows-box-shadow">
+               
+
+                <div class="header"><label for="teste-input-on-top">lixo.jpeg</label>
+                    <div class="header-buttons">
+
+                        <label class="minimize windows-box-shadow"></label>
+                        <label class="maximize windows-box-shadow"></label>
+                        <label class="close windows-box-shadow">X</label>
+
+                        <script>
+                            document.addEventListener('DOMContentLoaded', function () {
+                                    var lixoWindow = document.getElementById('lixo');
+
+                                    
+
+                                    document.querySelector('.minimize').addEventListener('click', function () {
+                                        lixoWindow.style.display = 'none';
+                                    });
+
+                                    
+
+                                    document.querySelector('.maximize').addEventListener('click', function () {
+                                                            if (isMaximized) {
+                                    // Restore to normal size
+                                    lixoWindow.style.width = normalWidth;
+                                    lixoWindow.style.height = normalHeight;
+                                } else {
+                                    // Maximize
+                                    lixoWindow.style.width = maximizedWidth;
+                                    lixoWindow.style.height = maximizedHeight;
+                                }
+                                isMaximized = !isMaximized;
+                            });
+
+                                    
+
+                                    document.querySelector('.close').addEventListener('click', function () {
+                                        lixoWindow.style.display = 'none';
+                                    });
+                                });
+                        </script>
+                    </div>
+                </div>
+
+                
+                
+                
+
+                <div class="options line">
+                    <div class="item">File</div>
+                    <div class="item">Edit</div>
+                    <div class="item">Views</div>
+                    <div class="item">Favorites</div>
+                    <div class="item">Tools</div>
+                    <div class="item">Help</div>
+                </div>
+
+                
+                    <div id="imagem-lixo">
+
+
+
+                    </div>
+                
+               
+                
+
+
+            </div>
+        </div>
+
+        
+
         <div id="all-windows">
             <div class="window ie windows-box-shadow">
                 <div class="header"><label for="windows-ie-input-on-top">Bino Explorer</label>
@@ -259,7 +336,7 @@
                     <input type="text" class="inverse-windows-box-shadow" value="https://www.googly.com" />
                 </div>
                 <div class="content">
-                    <iframe src="googly/index.html" ></iframe>
+                    <iframe src="googly/googly-index.html" ></iframe>
                 </div>
             </div>
             <div class="window help windows-box-shadow">
@@ -400,27 +477,28 @@
                     <div class="item">Help</div>
                 </div>
                 <div class="content white">
-                    <input type="radio" name="trash-radio" id="lixo.jpeg" />
-                    <input type="radio" name="trash-radio" id="macos" />
-                    <input type="radio" name="trash-radio" id="itunes" />
-                    <label class="file windows-11" for="windows-11">
-                        <span class="image"><img
-                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwBAMAAAClLOS0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAALVBMVEUAAAAAAACAAAD/AAAA/wAAgACAgIAAAIAAAP///wCAgAAAgIDAwMAA//////9JSTaIAAAAAXRSTlMAQObYZgAAAAFiS0dEDm+9ME8AAAAHdElNRQfiBhoANyn1CWoqAAABtUlEQVQ4y7WTsWrjQBRFRxgFlXohwpu/CKsvMGg6syCYhw0rQqrUq0LMlHERZkBVyi1TpkwRmA9Q2nSBfIDrfEPejGRrlLW3Su4DC97hzuVKHsa+QRGQju1DEg3Pfg9pAPxEcJrDGZ9YgEFEkxMoFhMQHQHpYTAbYg4APweOmuUsn+X/AT+pRbaA66s9uJh5MIhz3Dd3IQQUnN8DCFzJaXNl4PzvPSAq9WfS3DhwB7hq9WbSfAesVTINmw+gbbXWNe2TXfMBWPukpLMk/QQOsZKNOysxzCRmdDxx1YgyBDXAwx2sxUpXSw9uEg8GLRrVdF3pm7sQB9oN/cy1bpacp2NzWL/ZRwCzbkQnMB2b43Pbkuf2uSJDD9ycvL68U2lrq6IjQ5nump9U2y3/3RpzuySDd/TN45dfBbfGGkMJvaNXvN0WHI0x2kdkI3gvCk/UJwe7LAparI1GFxH8JwQdRRuj8IwM5QgqMghErTcbxNARc6cfipSFESzunIPeFH2/LAsAq1yEczSynly5mBLAGcRchgbGEEuXIHFeT69n7BOkrD8Z6H7KXv9eapjTuj522VP21foAO1apyR+rjO8AAAAldEVYdGRhdGU6Y3JlYXRlADIwMTgtMDYtMjZUMDA6NTU6NDEtMDQ6MDA1M539AAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE4LTA2LTI2VDAwOjU1OjQxLTA0OjAwRG4lQQAAAABJRU5ErkJggg=="
-                                alt="" /></span>
-                        <span class="text">lixo.jpeg</span>
-                    </label>
-                    <label class="file macos" for="macos">
-                        <span class="image"><img
-                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwBAMAAAClLOS0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAGFBMVEUAAACAgAAAAADAwMD//wD///+AgIAA//95HUQQAAAAAXRSTlMAQObYZgAAAAFiS0dEBfhv6ccAAAAHdElNRQfiBhoANRSfV0S5AAAA50lEQVQ4y7XSsQ7CIBAGYFy618HZYKp7MezGR2hsV0MDb6B9fQsc1/YOHEz8lyb9ctxxQQghapa98NldWQDuNDeAB01dqqhNocfBFCpchIr1+B+4FEvAwrdvKKgYzaCVPucMTD7vFWhsO2xhaUsB21JIbS8TBWjL4TX8CGc/c67HiawEIQwnM9CEe5rCUWoFsCwPUq4hrYRWGAkJ4zqEHl+BgZ0l6OAoZeL2Cfi2ATSApRUjAr6oDcxvIQ0lw827BbbplfsKlS3AqGjGOK5jARAVKylCGjdzVrw576+PBWjjfz7Yc/75AfUZE8mcao/xAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE4LTA2LTI2VDAwOjUzOjIwLTA0OjAwWDXviQAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxOC0wNi0yNlQwMDo1MzoyMC0wNDowMCloVzUAAAAASUVORK5CYII="
-                                alt="" /></span>
-                        <span class="text">Mac_OS.exe</span>
-                    </label>
-                    <label class="file itunes" for="itunes">
-                        <span class="image"><img
-                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAM1BMVEUAAAAzMzPd3d1fX1/AwMDX19f/zJnMmcyGhoZ/f3//zMyZ/8x3d3dmZmaysrKWlpb////dU6LHAAAAAXRSTlMAQObYZgAAAAFiS0dEEJWyDSwAAAAHdElNRQfiBBMBIhiVaPrZAAABaUlEQVRIx73V7a6DIAyAYSkIgpPd/92urXwNqo7k5PQne584wGXLkkepZW6UmiRKTRKlJolSkwTDOcHdNJg5rNL9D4A0V7HGaQCAoVmtBbeJvdl02Su0wDq3bUIPOh8Oth0QiPY6Hz+VBCAB6l0IndDlgrkTQCd06cHj9CCEQdT+3L1pAff7LpwWGJ92X0B+wI6jJZB2b06x2qYfASZ59w3IuSAqoLiClOOnQ08nqviMwPB51Z4vUo8gDR0vUe9Dze+A8fnH6mveAblH0a7rO/Dy/vgVcP/CxV7cAU+L8U9BqEPgwLX3+yeQHnHEyH2kuQa0vO/Nsb5jne+LSDXm+IrWizMNkG6acxLp1cClO5Bz5yy/fOc3vwAL1NwFC2WnRfS/B++a/gsYGVQRemDEvgGWQSdGkAX1aweM1CcR+AFrB8SeBff8jeJzT6IB8blH4Uegb/qF/o3SnhN4yE+iIb+fP+TZ8IyffABZtRpvqw6ULQAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAxOC0wNC0xOVQwMTozNDoyNC0wNDowMNJB+WoAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMTgtMDQtMTlUMDE6MzQ6MjQtMDQ6MDCjHEHWAAAAAElFTkSuQmCC"
-                                alt="" /></span>
-                        <span class="text">itunes.exe</span>
-                    </label>
+                    
+                    <!--aqui-->
+                    
+                    <div id="lixo-icon">
+                        <div class="desktop-item">
+                            <div class="icon"><img src="img/folder1.png" alt="" /></div>
+                        <div class="text">lixo.jpeg</div>
+                        </div>
+                    </div>
+
+                    <script>
+                    document.getElementById('lixo-icon').addEventListener('click', function() {
+                            var lixoWindow = document.getElementById('lixo');
+                            if (lixoWindow.style.display === 'block') {
+                                lixoWindow.style.display = 'none';
+                            } else {
+                                lixoWindow.style.display = 'block';
+                            }
+                        });
+                    
+                    </script>
+                    
                 </div>
             </div>
 
@@ -467,7 +545,7 @@
                 </div>
             </div>
             <div class="window notepad windows-box-shadow">
-                <div class="header"><label for="windows-notepad-input-on-top">Notepad</label>
+                <div class="header"><label for="windows-notepad-input-on-top">bino.txt</label>
                     <div class="header-buttons">
                         <label for="windows-notepad-input-min" class="minimize windows-box-shadow"></label>
                         <label for="windows-notepad-input-max" class="maximize windows-box-shadow"></label>
@@ -480,7 +558,42 @@
                     <div class="item">Search</div>
                 </div>
                 <div class="content">
-                    <textarea></textarea>
+                        <textarea>
+                              -****************************************-                                           
+                            -*****+================================+*****-                                         
+                            -****+====================================+****-                                        
+                            ****========================================****                                        
+                            ****========================================****        -=====-                         
+                            ****=====##@@@@@@##==========##@@@@@@##=====****        *------*                        
+                            *****+=#@@==    ==@@#======#@@==    ==@@#=+*****        *------*                        
+                            ******%@=   ====   =@#====#@@   ====   @@%******        *------*                        
+                            ****=*@@   @@@@@@   @@****@@   @@@@@@   @@*+****        *------*                        
+                            ****::@@   @@@@@@   @@****@@   @@@@@@   @@==****       *-------*                        
+                            ****::*@@   ====   @@#==--*@@   ====   @@#==****       *------*                         
+                            ****:::*@@==    ==@@#===--:*@@==    ==@@#===****       *------*                         
+                            ****:::::**@@@@@@**----::::::**@@@@@@**--===****     -=-------*-------------            
+                            ****:::::::::::::::::::::::::::::::------===****   -=------------=============-         
+                            ****::::::::::::::::::::::::::::::::-----=++****--=-------------*---=====------*        
+                            ****::::::::::::::::::::::::::::::::-----*----------------------*==============*        
+                            ****::::::::::::::::::::::::::::::::-----*-----------------------+++++++++++++-         
+                            ****::::::::::::::::::::::::::::::::-----*-----------------------+=-----------=-        
+                            ****::::::::::::::::::::::::::::::::-----*---------------------=**=============*        
+                            ****::::::::::::::::::::::::::::::::----=*--------=----------==++*=============*        
+                            ****:::::::::::::::::::::::::::::::-----=*----------==========++=+++++++++++++-         
+                            ****:::::::::::::::::::::::::::::::-----=*-----------=======++===*------------+-        
+                            ****:::::::::::::::::::::::::::::::-----=*----------=====+++=====*=============*        
+                            ****:::::::::::::::::::::::::::::::-----=*-------================*=============*        
+                            ****:::::::::::::::::::::::::::::::-----=*========================++++++++++++-         
+                            ****:::::::::::::::::::::::::::::::-----=*=======================++=====------+-        
+                            ****:::::::::::::::::::::::::::::::-----=++++++++================*=============*        
+                            ****:::::::::::::::::::::::::::::::-----====**** ------+++++++++++*+++++++++++-         
+                            *****=:::::::::::::::::::::::::::------===+*****                                        
+                            -********************************************-                                         
+                                --**************************************-- 
+
+
+
+             </textarea> 
                 </div>
             </div>
             <div class="window minesweeper windows-box-shadow">
@@ -653,7 +766,7 @@
             <div id="start-button-items">
                 <label id="start-button" class="windows-box-shadow" for="start-button-input"></label>
                 <div id="items">
-                    <!--aqui-->
+                    
                     <label for="windows-input-min" class="ie-tab tab windows-box-shadow"><span><img
                                 src="img/bino www.png"
                                 alt="" /></span><span>Bino Explorer</span></label>
@@ -663,7 +776,7 @@
                                     alt="" /></span><span>teste</span></label>
 
                                     <label for="bino-os-gif" class="gif-tab-text tab windows-box-shadow"><span><img
-                                        src="img/bino drip wide.png"
+                                        src="img/gif/ICON_3.png"
                                         alt="" /></span><span>GIF</span></label>
 
                     <label for="windows-help-input-min" class="help-tab tab windows-box-shadow"><span><img
@@ -671,7 +784,7 @@
                                 alt="" /></span><span>Help Center</span></label>
                     <label for="windows-notepad-input-min" class="notepad-tab tab windows-box-shadow"><span><img
                                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAUVBMVEUAAACGhoYAgID4+Phm//+ZzMyZ///AwMAAAADM///x8fHM7P/q6upmzMymyvDM/8zd3d2Z/8zj4+MzmZnMzMxmzP9m/8wzzMwzzP/X19f///8yWdUJAAAAAXRSTlMAQObYZgAAAAFiS0dEGnVn5DIAAAAHdElNRQfiBhoALTAhTzgxAAABUklEQVQ4y5WT27aCMAxEJZByqYkFqR7//0fPpKUW0BeH4svsziQuvVx+UNOcz1HU0ukcEerYuf2hnobhEJA1TuPkPc5Vhr6pBLlst5MRo/de6RMwG5evsG8jAnZA9s22yze8jICwB8ZpKEL8rBawvAFyk7fZsmbdAvaArwHqsaUM97tIAVBQbjtdHApshb5dKpAGm+Hgg9WxTRDeAPybpma7i69RHaUGqYAf0axshzkHrG1JICtNT0ai2gpoqIBXh2iGLSodP2wFa8gVhKVSgOPIHYgYLaBvSwK5tJcKdyAk4qL5oQA2AaslR4ZpPpUG2QCNjzibm/yYAqwhJWCCjlmzkxih0rABSH5s2SLP+Ewr5AarIOYt2N4/eVrAmhu2Ic9KE4QKXIaT7rVBmv3PulnCC1rXF552l7ADlhDCy7D2GwDirP4I4N941tH/nPfsf9M/lngcOlIX3Z0AAAAldEVYdGRhdGU6Y3JlYXRlADIwMTgtMDYtMjZUMDA6NDU6NDgtMDQ6MDBhJQfuAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE4LTA2LTI2VDAwOjQ1OjQ4LTA0OjAwEHi/UgAAAABJRU5ErkJggg=="
-                                alt="" /></span><span>Notepad</span></label>
+                                alt="" /></span><span>bino.txt</span></label>
                     <label for="windows-documents-input-min" class="documents-tab tab windows-box-shadow"><span><img
                                 src="img/folder1.png"
                                 alt="" /></span><span>teste_</span></label>
@@ -704,7 +817,7 @@
                                         alt="" /> Minesweeper</label></li>
                             <li><label for="windows-notepad-input"><img
                                         src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAUVBMVEUAAACGhoYAgID4+Phm//+ZzMyZ///AwMAAAADM///x8fHM7P/q6upmzMymyvDM/8zd3d2Z/8zj4+MzmZnMzMxmzP9m/8wzzMwzzP/X19f///8yWdUJAAAAAXRSTlMAQObYZgAAAAFiS0dEGnVn5DIAAAAHdElNRQfiBhoALTAhTzgxAAABUklEQVQ4y5WT27aCMAxEJZByqYkFqR7//0fPpKUW0BeH4svsziQuvVx+UNOcz1HU0ukcEerYuf2hnobhEJA1TuPkPc5Vhr6pBLlst5MRo/de6RMwG5evsG8jAnZA9s22yze8jICwB8ZpKEL8rBawvAFyk7fZsmbdAvaArwHqsaUM97tIAVBQbjtdHApshb5dKpAGm+Hgg9WxTRDeAPybpma7i69RHaUGqYAf0axshzkHrG1JICtNT0ai2gpoqIBXh2iGLSodP2wFa8gVhKVSgOPIHYgYLaBvSwK5tJcKdyAk4qL5oQA2AaslR4ZpPpUG2QCNjzibm/yYAqwhJWCCjlmzkxih0rABSH5s2SLP+Ewr5AarIOYt2N4/eVrAmhu2Ic9KE4QKXIaT7rVBmv3PulnCC1rXF552l7ADlhDCy7D2GwDirP4I4N941tH/nPfsf9M/lngcOlIX3Z0AAAAldEVYdGRhdGU6Y3JlYXRlADIwMTgtMDYtMjZUMDA6NDU6NDgtMDQ6MDBhJQfuAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE4LTA2LTI2VDAwOjQ1OjQ4LTA0OjAwEHi/UgAAAABJRU5ErkJggg=="
-                                        alt="" /> Notepad</label></li>
+                                        alt="" /> bino.txt</label></li>
                         </ul>
                     </li>
                     <li><label for="windows-documents-input"><img
