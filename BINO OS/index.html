@@ -234,7 +234,8 @@
 <!--aqui-->
 
         
-            <div id="lixo" class="window ie max windows-box-shadow">
+            <div id="lixo" class="window ie max windows-box-shadow" style="width: 500px; height: 300px; position: absolute; left: 100px;
+top: 100px;">
                
                 
 
@@ -248,11 +249,12 @@
                         <script>
                             document.addEventListener('DOMContentLoaded', function () {
                                     var lixoWindow = document.getElementById('lixo');
+                                    var lixoTab = document.getElementById('lixo-tab');
                                     var isMaximized = false;
                                     var normalWidth = "100%"; 
                                     var normalHeight = "100%"; 
-                                    var maximizedWidth = "30rem"; 
-                                    var maximizedHeight = "300px"; 
+                                    var maximizedWidth = "100%"; 
+                                    var maximizedHeight = "91.5vh"; 
 
                                     function minimizeWindow() {
                                         lixoWindow.style.display = 'none';
@@ -263,12 +265,21 @@
                                         // Restoring normal state
                                         lixoWindow.style.width = normalWidth;
                                         lixoWindow.style.height = normalHeight;
+
+                                        lixoWindow.style.left = "100px";
+                                        lixoWindow.style.top = "100px";
+                                        lixoWindow.style.zIndex = 999999999;
+                                        
                                     } else {
                                         // Maximizing
                                         normalWidth = lixoWindow.style.width;
                                         normalHeight = lixoWindow.style.height;
                                         lixoWindow.style.width = maximizedWidth;
                                         lixoWindow.style.height = maximizedHeight;
+
+                                        lixoWindow.style.left = "-0.5rem";
+                                        lixoWindow.style.top = "0";
+                                        lixoWindow.style.zIndex = 99999999;
                                     }
                                     lixoWindow.style.overflow = 'hidden'; // Ensure overflow: hidden is applied
                                     isMaximized = !isMaximized;
@@ -276,7 +287,27 @@
 
                                     function closeWindow() {
                                         lixoWindow.style.display = 'none';
+                                        lixoTab.style.display = 'none';
                                     }
+
+
+
+                                    function toggleWindow() {
+                                    if (lixoWindow.style.display === 'block') {
+                                    lixoWindow.style.display = 'none';
+                                    lixoTab.classList.remove('tab-novo');
+                                    lixoTab.classList.add('tab-novo-2');
+                                } else {
+                                    lixoWindow.style.display = 'block';
+                                    lixoTab.classList.remove('tab-novo-2');
+                                    lixoTab.classList.add('tab-novo');
+                                }
+                                    }
+
+                    // Attach the toggleWindow function to the tab click event
+                    lixoTab.addEventListener('click', toggleWindow);
+                                    
+
 
                                     var minimizeButtons = document.getElementsByClassName('minimize');
                                     var maximizeButtons = document.getElementsByClassName('maximize');
@@ -499,26 +530,31 @@
                     
                     <!--aqui-->
                     
-                    <div id="lixo-icon">
-                        <div class="desktop-item">
-                            <div class="icon"><img src="img/folder1.png" alt="" /></div>
-                        <div class="text">lixo.jpeg</div>
-                        </div>
-                    </div>
+                                            <div id="lixo-icon">
+                                                <div class="desktop-item">
+                                                    <div class="icon"><img src="img/folder1.png" alt="" /></div>
+                                                    <div class="text">lixo.jpeg</div>
+                                                </div>
+                                            </div>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            <script>
+                                                document.getElementById('lixo-icon').addEventListener('click', function () {
+                                                var lixoTab = document.getElementById('lixo-tab');
+                                                var lixoWindow = document.getElementById('lixo');
 
-                    <script>
-                    
-                    document.getElementById('lixo-icon').addEventListener('click', function() {
-                            var lixoWindow = document.getElementById('lixo');
-                            if (lixoWindow.style.display === 'block') {
-                                lixoWindow.style.display = 'none';
-                            } else {
-                                lixoWindow.style.display = 'block';
-                            }
-                        });
-                    
-                    </script>
-                    
+                                                if (lixoTab.style.display === 'flex') {
+                                                    lixoTab.style.display = 'none';
+                                                    lixoWindow.style.display = 'none';
+                                                } else {
+                                                    lixoTab.style.display = 'flex';
+                                                    lixoWindow.style.display = 'block';
+                                                }
+                                            });
+                                            </script>                                            
                 </div>
             </div>
 
@@ -799,9 +835,9 @@
                                         src="img/gif/ICON_3.png"
                                         alt="" /></span><span>GIF</span></label>
 
-                                    <label for="lixo" class="gif-tab-text tab windows-box-shadow"><span><img
-                                            src="img/gif/ICON_3.png"
-                                            alt="" /></span><span>bino.txt</span></label>
+                                        <label for="lixo" class="tab-novo tab windows-box-shadow" id="lixo-tab">
+                                            <span><img src="img/bino fixe.png" alt="" /></span><span>lixo.jpeg</span>
+                                        </label>
 
                     <label for="windows-help-input-min" class="help-tab tab windows-box-shadow"><span><img
                                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgBAMAAACBVGfHAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAGFBMVEUAAACAAIAAAACAgICAgAD//wDAwMD///9lJw0+AAAAAXRSTlMAQObYZgAAAAFiS0dEBxZhiOsAAAAHdElNRQfiBhgXChR06RP7AAAAvUlEQVQoz3XRUQ6DIAyAYeYNKOwd8QTLEn1eMg+wxF7AB7zBvP7aUlBM5hufP5QEY/58N7iAs7ENHrYVZ20jHDQiwUk4mPF1CAV3RKwNB7i88UMAGnj6LRDKCE9GAKGOmOWMIZQ70JqmwBg08Ljw1CGFcknPaxgJIMoOXlPA8GSRkXZMKRpILHM+Ia1gYPtKIyeknrZsu0oOGLJoYKybsmhgul5Fg0M0qLKXoEoNihyByto8Jsk5ELm+dqfBDwcgN9nfkQsOAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE4LTA2LTI0VDIzOjEwOjIwLTA0OjAw2N+qCAAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxOC0wNi0yNFQyMzoxMDoyMC0wNDowMKmCErQAAAAASUVORK5CYII="
