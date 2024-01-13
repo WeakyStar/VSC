@@ -233,9 +233,10 @@
 
 <!--aqui-->
 
-        <div id="lixo">
-            <div class="window ie windows-box-shadow">
+        
+            <div id="lixo" class="window ie max windows-box-shadow">
                
+                
 
                 <div class="header"><label for="teste-input-on-top">lixo.jpeg</label>
                     <div class="header-buttons">
@@ -247,33 +248,51 @@
                         <script>
                             document.addEventListener('DOMContentLoaded', function () {
                                     var lixoWindow = document.getElementById('lixo');
+                                    var isMaximized = false;
+                                    var normalWidth = "100%"; 
+                                    var normalHeight = "100%"; 
+                                    var maximizedWidth = "30rem"; 
+                                    var maximizedHeight = "300px"; 
 
-                                    
-
-                                    document.querySelector('.minimize').addEventListener('click', function () {
+                                    function minimizeWindow() {
                                         lixoWindow.style.display = 'none';
-                                    });
+                                    }
 
-                                    
+                                    function maximizeWindow() {
+                                        if (isMaximized) {
+                                        // Restoring normal state
+                                        lixoWindow.style.width = normalWidth;
+                                        lixoWindow.style.height = normalHeight;
+                                    } else {
+                                        // Maximizing
+                                        normalWidth = lixoWindow.style.width;
+                                        normalHeight = lixoWindow.style.height;
+                                        lixoWindow.style.width = maximizedWidth;
+                                        lixoWindow.style.height = maximizedHeight;
+                                    }
+                                    lixoWindow.style.overflow = 'hidden'; // Ensure overflow: hidden is applied
+                                    isMaximized = !isMaximized;
+                                    }
 
-                                    document.querySelector('.maximize').addEventListener('click', function () {
-                                                            if (isMaximized) {
-                                    // Restore to normal size
-                                    lixoWindow.style.width = normalWidth;
-                                    lixoWindow.style.height = normalHeight;
-                                } else {
-                                    // Maximize
-                                    lixoWindow.style.width = maximizedWidth;
-                                    lixoWindow.style.height = maximizedHeight;
-                                }
-                                isMaximized = !isMaximized;
-                            });
-
-                                    
-
-                                    document.querySelector('.close').addEventListener('click', function () {
+                                    function closeWindow() {
                                         lixoWindow.style.display = 'none';
-                                    });
+                                    }
+
+                                    var minimizeButtons = document.getElementsByClassName('minimize');
+                                    var maximizeButtons = document.getElementsByClassName('maximize');
+                                    var closeButtons = document.getElementsByClassName('close');
+
+                                    for (var i = 0; i < minimizeButtons.length; i++) {
+                                        minimizeButtons[i].addEventListener('click', minimizeWindow);
+                                    }
+
+                                    for (var i = 0; i < maximizeButtons.length; i++) {
+                                        maximizeButtons[i].addEventListener('click', maximizeWindow);
+                                    }
+
+                                    for (var i = 0; i < closeButtons.length; i++) {
+                                        closeButtons[i].addEventListener('click', closeWindow);
+                                    }
                                 });
                         </script>
                     </div>
@@ -303,8 +322,8 @@
                 
 
 
-            </div>
         </div>
+        
 
         
 
@@ -488,6 +507,7 @@
                     </div>
 
                     <script>
+                    
                     document.getElementById('lixo-icon').addEventListener('click', function() {
                             var lixoWindow = document.getElementById('lixo');
                             if (lixoWindow.style.display === 'block') {
@@ -779,6 +799,10 @@
                                         src="img/gif/ICON_3.png"
                                         alt="" /></span><span>GIF</span></label>
 
+                                    <label for="lixo" class="gif-tab-text tab windows-box-shadow"><span><img
+                                            src="img/gif/ICON_3.png"
+                                            alt="" /></span><span>bino.txt</span></label>
+
                     <label for="windows-help-input-min" class="help-tab tab windows-box-shadow"><span><img
                                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgBAMAAACBVGfHAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAGFBMVEUAAACAAIAAAACAgICAgAD//wDAwMD///9lJw0+AAAAAXRSTlMAQObYZgAAAAFiS0dEBxZhiOsAAAAHdElNRQfiBhgXChR06RP7AAAAvUlEQVQoz3XRUQ6DIAyAYeYNKOwd8QTLEn1eMg+wxF7AB7zBvP7aUlBM5hufP5QEY/58N7iAs7ENHrYVZ20jHDQiwUk4mPF1CAV3RKwNB7i88UMAGnj6LRDKCE9GAKGOmOWMIZQ70JqmwBg08Ljw1CGFcknPaxgJIMoOXlPA8GSRkXZMKRpILHM+Ia1gYPtKIyeknrZsu0oOGLJoYKybsmhgul5Fg0M0qLKXoEoNihyByto8Jsk5ELm+dqfBDwcgN9nfkQsOAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE4LTA2LTI0VDIzOjEwOjIwLTA0OjAw2N+qCAAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxOC0wNi0yNFQyMzoxMDoyMC0wNDowMKmCErQAAAAASUVORK5CYII="
                                 alt="" /></span><span>Help Center</span></label>
@@ -802,7 +826,7 @@
             <div id="start-menu" class="windows-box-shadow">
                 <div id="windows-start-menu-blue">BINO <span>OS</span></div>
                 <ul>
-                    <li class="line update"><label for="windows-update-input"><img
+                   <!-- <li class="line update"><label for="windows-update-input"><img
                                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwBAMAAAClLOS0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAALVBMVEUAAAAAAACAAAD/AAAA/wAAgACAgIAAAIAAAP///wCAgAAAgIDAwMAA//////9JSTaIAAAAAXRSTlMAQObYZgAAAAFiS0dEDm+9ME8AAAAHdElNRQfiBhoANyn1CWoqAAABtUlEQVQ4y7WTsWrjQBRFRxgFlXohwpu/CKsvMGg6syCYhw0rQqrUq0LMlHERZkBVyi1TpkwRmA9Q2nSBfIDrfEPejGRrlLW3Su4DC97hzuVKHsa+QRGQju1DEg3Pfg9pAPxEcJrDGZ9YgEFEkxMoFhMQHQHpYTAbYg4APweOmuUsn+X/AT+pRbaA66s9uJh5MIhz3Dd3IQQUnN8DCFzJaXNl4PzvPSAq9WfS3DhwB7hq9WbSfAesVTINmw+gbbXWNe2TXfMBWPukpLMk/QQOsZKNOysxzCRmdDxx1YgyBDXAwx2sxUpXSw9uEg8GLRrVdF3pm7sQB9oN/cy1bpacp2NzWL/ZRwCzbkQnMB2b43Pbkuf2uSJDD9ycvL68U2lrq6IjQ5nump9U2y3/3RpzuySDd/TN45dfBbfGGkMJvaNXvN0WHI0x2kdkI3gvCk/UJwe7LAparI1GFxH8JwQdRRuj8IwM5QgqMghErTcbxNARc6cfipSFESzunIPeFH2/LAsAq1yEczSynly5mBLAGcRchgbGEEuXIHFeT69n7BOkrD8Z6H7KXv9eapjTuj522VP21foAO1apyR+rjO8AAAAldEVYdGRhdGU6Y3JlYXRlADIwMTgtMDYtMjZUMDA6NTU6NDEtMDQ6MDA1M539AAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE4LTA2LTI2VDAwOjU1OjQxLTA0OjAwRG4lQQAAAABJRU5ErkJggg=="
                                 style="width: 1.5rem;" alt="" /> Windows Update</label></li>
                     <li class="programs"><label><img
@@ -825,14 +849,14 @@
                                 style="width: 1.5rem;" alt="" /> teste_</label></li>
                     <li class="line"><label for="windows-help-input"><img
                                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgBAMAAACBVGfHAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAGFBMVEUAAACAAIAAAACAgICAgAD//wDAwMD///9lJw0+AAAAAXRSTlMAQObYZgAAAAFiS0dEBxZhiOsAAAAHdElNRQfiBhgXChR06RP7AAAAvUlEQVQoz3XRUQ6DIAyAYeYNKOwd8QTLEn1eMg+wxF7AB7zBvP7aUlBM5hufP5QEY/58N7iAs7ENHrYVZ20jHDQiwUk4mPF1CAV3RKwNB7i88UMAGnj6LRDKCE9GAKGOmOWMIZQ70JqmwBg08Ljw1CGFcknPaxgJIMoOXlPA8GSRkXZMKRpILHM+Ia1gYPtKIyeknrZsu0oOGLJoYKybsmhgul5Fg0M0qLKXoEoNihyByto8Jsk5ELm+dqfBDwcgN9nfkQsOAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE4LTA2LTI0VDIzOjEwOjIwLTA0OjAw2N+qCAAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxOC0wNi0yNFQyMzoxMDoyMC0wNDowMKmCErQAAAAASUVORK5CYII="
-                                style="width: 1.5rem;" alt="" /> Help</label></li>
+                                style="width: 1.5rem;" alt="" /> Help</label></li> -->
                     <li><label for="login-screen-input"><img
                                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwBAMAAAClLOS0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAKlBMVEUAAACAgIAAAAD////AwMAAgAAA/wCAAAAAgID/AACAgAD//wAAAP8AAIBZpFh1AAAAAXRSTlMAQObYZgAAAAFiS0dEAxEMTPIAAAAHdElNRQfiBhgXEB4kEQA+AAABHklEQVQ4y92QMU7DMBSGU4/ZEldC6uS8tkKELuAshE6tGUjEUokbIA7QQ3AAhFR1QyZTvLWe8ETVsSyciIRWqtF7J+j/b/792e/9QXCCigR93pETOuAyEzQgaYRncZ9COjJ+nFEIvxo+3xFIM9L85QkwwuXZYjirMMLlxXJ+6QqEcHm+fE0s9HGwWYx+4i5BbGH3nUzxH+P7yW7DiammN9noCwNBV72NHwYYYJDIbYa3CHUUKardj8TkA6UUAq57bq0BAAGrnnE5bjy8XcWpW9d7vfuBTmLj5F75v4CBcQdZ4QcBM648+DhzmH1Caq1VyrbWHlHWpiyLOi1ae09VtpUGplt786Zlo/am+LNXYdXU4d88Is1iggoY0dNp6BfBfGAv3Vb5dgAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAxOC0wNi0yNFQyMzoxNjozMC0wNDowMBlr2tEAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMTgtMDYtMjRUMjM6MTY6MzAtMDQ6MDBoNmJtAAAAAElFTkSuQmCC"
                                 style="margin: 0 0.5rem 0 0;" alt="" /> Log Off <span class="spiderman logout-prompt">
                                 Spiderman...</span><span class="zark-muckerberg logout-prompt"> Zark
                                 Muckerberg...</span><span class="donald-trump logout-prompt"> Donald
                                 Trump...</span></label>
-                    </li>
+                    </li> 
                     <li><label for="shutdown-screen-input"><img
                                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAARVBMVEUAAACGhobAwMB3d3eysrLMzMz4+PjX19eZmZnq6urn59ZNTU2WlpZCQkIzAGYAAIAAAAAzAMwAAP8A/////wBVVVX///99stlUAAAAAXRSTlMAQObYZgAAAAFiS0dEFnzRqBkAAAAHdElNRQfiBhoANBn4/QlFAAAAzUlEQVQ4y83S0Q6DIAwFUGmhYudEdP7/r+6CZEEnvm438emetBDpun+KQW5rQpibtXWOHJHlPedeRHqHQHhm+zXKyKCqMmRhfV53IEb0YUh1EBCIMRH7PIAphEREipgJX71iijER16tAGJ79EShAJrZ3gu4KLMuaCDtqgHVZkwnXAGdYVskzqD3hhRE3IKYV7QkhxHyKBvCDUiKxnsAV2NhrIR9Q9cgGgv8QkAKOfU0KOPeFpGe1g8uHVUgb7MTjAk2QyTjO7T6T2/oHeQPSrw8Qg6bkoQAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAxOC0wNi0yNlQwMDo1MjoyNS0wNDowMOXPqxAAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMTgtMDYtMjZUMDA6NTI6MjUtMDQ6MDCUkhOsAAAAAElFTkSuQmCC"
                                 style="margin: 0 0.5rem 0 0;" alt="" /> Desligar</label></li>
