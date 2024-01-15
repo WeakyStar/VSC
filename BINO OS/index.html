@@ -258,6 +258,9 @@ top: 100px;">
 
                                     function minimizeWindow() {
                                         lixoWindow.style.display = 'none';
+
+                                        lixoTab.classList.remove('tab-novo');
+                                        lixoTab.classList.add('tab-novo-2');
                                     }
 
                                     function maximizeWindow() {
@@ -288,6 +291,9 @@ top: 100px;">
                                     function closeWindow() {
                                         lixoWindow.style.display = 'none';
                                         lixoTab.style.display = 'none';
+
+                                        lixoTab.classList.remove('tab-novo-2');
+                                        lixoTab.classList.add('tab-novo');
                                     }
 
 
@@ -538,20 +544,25 @@ top: 100px;">
                                             </div>
                                             
                                             
-                                            
-                                            
-                                            
                                             <script>
                                                 document.getElementById('lixo-icon').addEventListener('click', function () {
                                                 var lixoTab = document.getElementById('lixo-tab');
                                                 var lixoWindow = document.getElementById('lixo');
 
                                                 if (lixoTab.style.display === 'flex') {
-                                                    lixoTab.style.display = 'none';
-                                                    lixoWindow.style.display = 'none';
+                                                    
+                                                    lixoWindow.style.display = 'none'; 
+
+                                                    lixoTab.classList.remove('tab-novo');
+                                                    lixoTab.classList.add('tab-novo-2');
+
+                                                    
                                                 } else {
                                                     lixoTab.style.display = 'flex';
                                                     lixoWindow.style.display = 'block';
+
+                                                    lixoTab.classList.remove('tab-novo-2');
+                                                    lixoTab.classList.add('tab-novo');
                                                 }
                                             });
                                             </script>                                            
