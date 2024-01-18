@@ -104,7 +104,7 @@
                 <div class="icon"><img
                         src="img/folder1.png"
                         alt="" /> </div>
-                <div class="text">teste_</div>
+                <div class="text">Experiência</div>
             </label>
 
 
@@ -360,6 +360,138 @@ top: 100px;">
 
 
         </div>
+
+
+
+
+        <div id="plastico" class="window ie max windows-box-shadow" style="width: 500px; height: 300px; position: absolute; left: 100px;
+top: 100px;">
+               
+                
+
+                <div class="header"><label for="teste-input-on-top">Solução 2</label>
+                    <div class="header-buttons">
+
+                        <label class="minimize windows-box-shadow"></label>
+                        <label class="maximize windows-box-shadow"></label>
+                        <label class="close windows-box-shadow">X</label>
+
+                        <script>
+                            document.addEventListener('DOMContentLoaded', function () {
+                                    var plasticoWindow = document.getElementById('plastico');
+                                    var plasticoTab = document.getElementById('plastico-tab');
+                                    var isMaximized = false;
+                                    var normalWidth = "100%"; 
+                                    var normalHeight = "100%"; 
+                                    var maximizedWidth = "100%"; 
+                                    var maximizedHeight = "91.5vh"; 
+
+                                    function minimizeWindow() {
+                                        plasticoWindow.style.display = 'none';
+
+                                        plasticoTab.classList.remove('tab-novo');
+                                        plasticoTab.classList.add('tab-novo-2');
+                                    }
+
+                                    function maximizeWindow() {
+                                        if (isMaximized) {
+                                        // Restoring normal state
+                                        plasticoWindow.style.width = normalWidth;
+                                        plasticoWindow.style.height = normalHeight;
+
+                                        plasticoWindow.style.left = "100px";
+                                        plasticoWindow.style.top = "100px";
+                                        plasticoWindow.style.zIndex = 999999999;
+                                        
+                                    } else {
+                                        // Maximizing
+                                        normalWidth = plasticoWindow.style.width;
+                                        normalHeight = plasticoWindow.style.height;
+                                        plasticoWindow.style.width = maximizedWidth;
+                                        plasticoWindow.style.height = maximizedHeight;
+
+                                        plasticoWindow.style.left = "-0.5rem";
+                                        plasticoWindow.style.top = "0";
+                                        plasticoWindow.style.zIndex = 99999999;
+                                    }
+                                    plasticoWindow.style.overflow = 'hidden'; // Ensure overflow: hidden is applied
+                                    isMaximized = !isMaximized;
+                                    }
+
+                                    function closeWindow() {
+                                        plasticoWindow.style.display = 'none';
+                                        plasticoTab.style.display = 'none';
+
+                                        plasticoTab.classList.remove('tab-novo-2');
+                                        plasticoTab.classList.add('tab-novo');
+                                    }
+
+
+
+                                    function toggleWindow() {
+                                    if (plasticoWindow.style.display === 'block') {
+                                    plasticoWindow.style.display = 'none';
+                                    plasticoTab.classList.remove('tab-novo');
+                                    plasticoTab.classList.add('tab-novo-2');
+                                } else {
+                                    plasticoWindow.style.display = 'block';
+                                    plasticoTab.classList.remove('tab-novo-2');
+                                    plasticoTab.classList.add('tab-novo');
+                                }
+                                    }
+
+                    // Attach the toggleWindow function to the tab click event
+                    plasticoTab.addEventListener('click', toggleWindow);
+                                    
+
+
+                                    var minimizeButtons = document.getElementsByClassName('minimize');
+                                    var maximizeButtons = document.getElementsByClassName('maximize');
+                                    var closeButtons = document.getElementsByClassName('close');
+
+                                    for (var i = 0; i < minimizeButtons.length; i++) {
+                                        minimizeButtons[i].addEventListener('click', minimizeWindow);
+                                    }
+
+                                    for (var i = 0; i < maximizeButtons.length; i++) {
+                                        maximizeButtons[i].addEventListener('click', maximizeWindow);
+                                    }
+
+                                    for (var i = 0; i < closeButtons.length; i++) {
+                                        closeButtons[i].addEventListener('click', closeWindow);
+                                    }
+                                });
+                        </script>
+                    </div>
+                </div>
+
+                
+                
+                
+
+                <div class="options line">
+                    <div class="item">File</div>
+                    <div class="item">Edit</div>
+                    <div class="item">Views</div>
+                    <div class="item">Favorites</div>
+                    <div class="item">Tools</div>
+                    <div class="item">Help</div>
+                </div>
+
+                
+                <div class="content white">
+
+                        
+
+
+
+                    </div>
+                
+               
+                
+
+
+        </div>
         
 
         
@@ -572,7 +704,7 @@ top: 100px;">
 
             
             <div class="window documents windows-box-shadow">
-                <div class="header"><label for="windows-documents-input-on-top">teste_</label>
+                <div class="header"><label for="windows-documents-input-on-top">Solução 1</label>
                     <div class="header-buttons">
                         <label for="windows-documents-input-min" class="minimize windows-box-shadow"></label>
                         <label for="windows-documents-input-max" class="maximize windows-box-shadow"></label>
@@ -594,8 +726,42 @@ top: 100px;">
                         <div class="text">teste</div>
                     </label>
 
+                    <div id="plastico-icon">
+                        <div class="desktop-item">
+                            <div class="icon"><img src="img/folder1.png" alt="" /></div>
+                            <div class="text">Plástico 1</div>
+                        </div>
+                    </div>
 
-                    <input type="radio" name="documents-radio" id="secret-codes" />
+                    
+                    <script>
+                        document.getElementById('plastico-icon').addEventListener('click', function () {
+                        var plasticoTab = document.getElementById('plastico-tab');
+                        var plasticoWindow = document.getElementById('plastico');
+
+                        if (plasticoTab.style.display === 'flex') {
+                            
+                            plasticoWindow.style.display = 'none'; 
+
+                            plasticoTab.classList.remove('tab-novo');
+                            plasticoTab.classList.add('tab-novo-2');
+
+                            
+                        } else {
+                            plasticoTab.style.display = 'flex';
+                            plasticoWindow.style.display = 'block';
+
+                            plasticoTab.classList.remove('tab-novo-2');
+                            plasticoTab.classList.add('tab-novo');
+                        }
+                    });
+
+                    </script>
+
+                    
+
+
+                    <!-- <input type="radio" name="documents-radio" id="secret-codes" />
                     <input type="radio" name="documents-radio" id="diary" />
                     <label class="file secret-codes" for="secret-codes">
                         <span class="image"><img
@@ -608,7 +774,7 @@ top: 100px;">
                                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgBAMAAACBVGfHAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAGFBMVEUAAAAAAACAgID////AwMAAAL8AAP///wCsLlssAAAAAXRSTlMAQObYZgAAAAFiS0dEAxEMTPIAAAAHdElNRQfiBhoAOCQMIApYAAAAvUlEQVQoz22Ryw7CIBREqYl7xlb3Pj7APpQ1iaZbXcjaxBTXhCi/bx+2XBomd8PJDDcMjCUc43DWab8rpunIIi/TcbYyCkovKdltBpbPGVAtuHjJqz6GDvUOI1d9DiPqpcMt6tsEkXyjwy04NWEkhWooEMD6wUnEGuBOHidEBXACrKsNuuf/A7Wr3AekD2trB1JQe4MzUvqIK4BMeofIV0OFIzBpOYG+qmxoLNJ6DNCSow528I6s//4EXu3xB1FNX4O6vHKSAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE4LTA2LTI2VDAwOjU2OjM2LTA0OjAwEWYRaQAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxOC0wNi0yNlQwMDo1NjozNi0wNDowMGA7qdUAAAAASUVORK5CYII="
                                 alt="" /></span>
                         <span class="text">Diary.rtf</span>
-                    </label>
+                    </label> -->
                 </div>
             </div>
             <div class="window notepad windows-box-shadow">
@@ -850,6 +1016,10 @@ top: 100px;">
                                             <span><img src="img/bino fixe.png" alt="" /></span><span>lixo.jpeg</span>
                                         </label>
 
+                                        <label for="plastico" class="tab-novo tab windows-box-shadow" id="plastico-tab">
+                                            <span><img src="img/folder1.png" alt="" /></span><span>Solução 2</span>
+                                        </label>
+
                     <label for="windows-help-input-min" class="help-tab tab windows-box-shadow"><span><img
                                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgBAMAAACBVGfHAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAGFBMVEUAAACAAIAAAACAgICAgAD//wDAwMD///9lJw0+AAAAAXRSTlMAQObYZgAAAAFiS0dEBxZhiOsAAAAHdElNRQfiBhgXChR06RP7AAAAvUlEQVQoz3XRUQ6DIAyAYeYNKOwd8QTLEn1eMg+wxF7AB7zBvP7aUlBM5hufP5QEY/58N7iAs7ENHrYVZ20jHDQiwUk4mPF1CAV3RKwNB7i88UMAGnj6LRDKCE9GAKGOmOWMIZQ70JqmwBg08Ljw1CGFcknPaxgJIMoOXlPA8GSRkXZMKRpILHM+Ia1gYPtKIyeknrZsu0oOGLJoYKybsmhgul5Fg0M0qLKXoEoNihyByto8Jsk5ELm+dqfBDwcgN9nfkQsOAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE4LTA2LTI0VDIzOjEwOjIwLTA0OjAw2N+qCAAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxOC0wNi0yNFQyMzoxMDoyMC0wNDowMKmCErQAAAAASUVORK5CYII="
                                 alt="" /></span><span>Help Center</span></label>
@@ -858,7 +1028,7 @@ top: 100px;">
                                 alt="" /></span><span>bino.txt</span></label>
                     <label for="windows-documents-input-min" class="documents-tab tab windows-box-shadow"><span><img
                                 src="img/folder1.png"
-                                alt="" /></span><span>teste_</span></label>
+                                alt="" /></span><span>Solução 1</span></label>
                     <label for="windows-update-input-min" class="update-tab tab windows-box-shadow"><span><img
                                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwBAMAAAClLOS0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAALVBMVEUAAAAAAACAAAD/AAAA/wAAgACAgIAAAIAAAP///wCAgAAAgIDAwMAA//////9JSTaIAAAAAXRSTlMAQObYZgAAAAFiS0dEDm+9ME8AAAAHdElNRQfiBhoANyn1CWoqAAABtUlEQVQ4y7WTsWrjQBRFRxgFlXohwpu/CKsvMGg6syCYhw0rQqrUq0LMlHERZkBVyi1TpkwRmA9Q2nSBfIDrfEPejGRrlLW3Su4DC97hzuVKHsa+QRGQju1DEg3Pfg9pAPxEcJrDGZ9YgEFEkxMoFhMQHQHpYTAbYg4APweOmuUsn+X/AT+pRbaA66s9uJh5MIhz3Dd3IQQUnN8DCFzJaXNl4PzvPSAq9WfS3DhwB7hq9WbSfAesVTINmw+gbbXWNe2TXfMBWPukpLMk/QQOsZKNOysxzCRmdDxx1YgyBDXAwx2sxUpXSw9uEg8GLRrVdF3pm7sQB9oN/cy1bpacp2NzWL/ZRwCzbkQnMB2b43Pbkuf2uSJDD9ycvL68U2lrq6IjQ5nump9U2y3/3RpzuySDd/TN45dfBbfGGkMJvaNXvN0WHI0x2kdkI3gvCk/UJwe7LAparI1GFxH8JwQdRRuj8IwM5QgqMghErTcbxNARc6cfipSFESzunIPeFH2/LAsAq1yEczSynly5mBLAGcRchgbGEEuXIHFeT69n7BOkrD8Z6H7KXv9eapjTuj522VP21foAO1apyR+rjO8AAAAldEVYdGRhdGU6Y3JlYXRlADIwMTgtMDYtMjZUMDA6NTU6NDEtMDQ6MDA1M539AAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE4LTA2LTI2VDAwOjU1OjQxLTA0OjAwRG4lQQAAAABJRU5ErkJggg=="
                                 alt="" /></span><span>Windows Update</span></label>
@@ -893,7 +1063,7 @@ top: 100px;">
                     </li>
                     <li><label for="windows-documents-input"><img
                                 src="img/folder1.png"
-                                style="width: 1.5rem;" alt="" /> teste_</label></li>
+                                style="width: 1.5rem;" alt="" /> Experiência</label></li>
                     <li class="line"><label for="windows-help-input"><img
                                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgBAMAAACBVGfHAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAGFBMVEUAAACAAIAAAACAgICAgAD//wDAwMD///9lJw0+AAAAAXRSTlMAQObYZgAAAAFiS0dEBxZhiOsAAAAHdElNRQfiBhgXChR06RP7AAAAvUlEQVQoz3XRUQ6DIAyAYeYNKOwd8QTLEn1eMg+wxF7AB7zBvP7aUlBM5hufP5QEY/58N7iAs7ENHrYVZ20jHDQiwUk4mPF1CAV3RKwNB7i88UMAGnj6LRDKCE9GAKGOmOWMIZQ70JqmwBg08Ljw1CGFcknPaxgJIMoOXlPA8GSRkXZMKRpILHM+Ia1gYPtKIyeknrZsu0oOGLJoYKybsmhgul5Fg0M0qLKXoEoNihyByto8Jsk5ELm+dqfBDwcgN9nfkQsOAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE4LTA2LTI0VDIzOjEwOjIwLTA0OjAw2N+qCAAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxOC0wNi0yNFQyMzoxMDoyMC0wNDowMKmCErQAAAAASUVORK5CYII="
                                 style="width: 1.5rem;" alt="" /> Help</label></li> -->

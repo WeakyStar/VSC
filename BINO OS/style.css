@@ -602,12 +602,15 @@ iframe {
     width: calc(100% - 4rem);
 }
 
+
+
 #imagem-lixo{
 
     position: relative;
 
     width: 100%;
     height: 100%;
+    background-color: #c0c0c0;
     background-image: url("img/dose_diaria.png");
     background-size: cover; /* Ensures the background covers the entire element */
     background-position: center; /* Centers the background within the element */
@@ -615,6 +618,9 @@ iframe {
     
     overflow: hidden;
 }
+
+
+
 
 #items {
     margin: 0 0 0 1rem;
@@ -754,6 +760,12 @@ textarea:focus {
    position: relative;
 
 }
+
+#plastico{
+    display: none;
+    position: relative;
+ 
+ }
 
 
 
